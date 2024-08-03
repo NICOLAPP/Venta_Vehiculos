@@ -1,22 +1,15 @@
--- --------------------------------------------------------
--- Host:                         190.90.160.172
--- Versión del servidor:         10.6.18-MariaDB-cll-lve-log - MariaDB Server
--- SO del servidor:              Linux
--- HeidiSQL Versión:             10.2.0.5599
--- --------------------------------------------------------
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+-- nikoc18@hotmail.com
+-- version 1.0
+-- 2024
+-- para HeidiSql
+-- 02/08/2024
 
 
--- Volcando estructura de base de datos para credicel_Mega_Autoventa
-CREATE DATABASE IF NOT EXISTS `credicel_Mega_Autoventa` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci */;
+-- Estructura de base de datos para credicel_Mega_Autoventa
+CREATE DATABASE IF NOT EXISTS `credicel_Mega_Autoventa`;
 USE `credicel_Mega_Autoventa`;
 
--- Volcando estructura para tabla credicel_Mega_Autoventa.Marca
+-- Estructura para tabla credicel_Mega_Autoventa.Marca
 CREATE TABLE IF NOT EXISTS `Marca` (
   `Id_Marca` int(11) NOT NULL AUTO_INCREMENT,
   `Marca` varchar(50) DEFAULT NULL,
@@ -24,9 +17,7 @@ CREATE TABLE IF NOT EXISTS `Marca` (
   PRIMARY KEY (`Id_Marca`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
--- Volcando datos para la tabla credicel_Mega_Autoventa.Marca: ~10 rows (aproximadamente)
-DELETE FROM `Marca`;
-/*!40000 ALTER TABLE `Marca` DISABLE KEYS */;
+-- Datos para la tabla credicel_Mega_Autoventa.Marca: 
 INSERT INTO `Marca` (`Id_Marca`, `Marca`, `Cantidad`) VALUES
 	(1, 'Kia', 238),
 	(2, 'Mazda', 249),
@@ -38,9 +29,8 @@ INSERT INTO `Marca` (`Id_Marca`, `Marca`, `Cantidad`) VALUES
 	(8, 'Ford', 101),
 	(9, 'Hyundai', 49),
 	(10, 'Volkswagen', 132);
-/*!40000 ALTER TABLE `Marca` ENABLE KEYS */;
 
--- Volcando estructura para tabla credicel_Mega_Autoventa.Modelo
+-- Estructura para tabla credicel_Mega_Autoventa.Modelo
 CREATE TABLE IF NOT EXISTS `Modelo` (
   `Id_Modelo` int(11) NOT NULL AUTO_INCREMENT,
   `Modelo` varchar(50) DEFAULT NULL,
@@ -49,9 +39,7 @@ CREATE TABLE IF NOT EXISTS `Modelo` (
   PRIMARY KEY (`Id_Modelo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
--- Volcando datos para la tabla credicel_Mega_Autoventa.Modelo: ~25 rows (aproximadamente)
-DELETE FROM `Modelo`;
-/*!40000 ALTER TABLE `Modelo` DISABLE KEYS */;
+-- Datos para la tabla credicel_Mega_Autoventa.Modelo: ~25 rows (aproximadamente)
 INSERT INTO `Modelo` (`Id_Modelo`, `Modelo`, `Marca`, `Precio_Unitario`) VALUES
 	(1, 'Kia Picanto', 'Kia', 64000000),
 	(2, 'Mazda CX-30', 'Mazda', 120000000),
@@ -78,9 +66,8 @@ INSERT INTO `Modelo` (`Id_Modelo`, `Modelo`, `Marca`, `Precio_Unitario`) VALUES
 	(23, 'Kia Stonic', 'Kia', 100000000),
 	(24, 'Kia Rio', 'Kia', 80000000),
 	(25, 'Mazda CX-5', 'Mazda', 140000000);
-/*!40000 ALTER TABLE `Modelo` ENABLE KEYS */;
 
--- Volcando estructura para tabla credicel_Mega_Autoventa.Sede_Departamento
+-- Estructura para tabla credicel_Mega_Autoventa.Sede_Departamento
 CREATE TABLE IF NOT EXISTS `Sede_Departamento` (
   `Id_Departamento` int(11) NOT NULL AUTO_INCREMENT,
   `Departamento` varchar(50) DEFAULT NULL,
@@ -88,18 +75,15 @@ CREATE TABLE IF NOT EXISTS `Sede_Departamento` (
   PRIMARY KEY (`Id_Departamento`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish_ci;
 
--- Volcando datos para la tabla credicel_Mega_Autoventa.Sede_Departamento: ~5 rows (aproximadamente)
-DELETE FROM `Sede_Departamento`;
-/*!40000 ALTER TABLE `Sede_Departamento` DISABLE KEYS */;
+-- Datos para la tabla credicel_Mega_Autoventa.Sede_Departamento: ~5 rows (aproximadamente)
 INSERT INTO `Sede_Departamento` (`Id_Departamento`, `Departamento`, `Ventas`) VALUES
 	(1, 'Antioquia', 60716000000),
 	(2, 'Valle del Cauca', 53728000000),
 	(3, 'Santander', 28724000000),
 	(4, 'Cundinamarca', 27960000000),
 	(5, 'Atlantico', 42784000000);
-/*!40000 ALTER TABLE `Sede_Departamento` ENABLE KEYS */;
 
--- Volcando estructura para tabla credicel_Mega_Autoventa.Tipo_Vehiculo
+-- Estructura para tabla credicel_Mega_Autoventa.Tipo_Vehiculo
 CREATE TABLE IF NOT EXISTS `Tipo_Vehiculo` (
   `Id_Tipo` int(11) NOT NULL AUTO_INCREMENT,
   `Tipo_Vehiculo` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
@@ -107,17 +91,14 @@ CREATE TABLE IF NOT EXISTS `Tipo_Vehiculo` (
   PRIMARY KEY (`Id_Tipo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish_ci;
 
--- Volcando datos para la tabla credicel_Mega_Autoventa.Tipo_Vehiculo: ~4 rows (aproximadamente)
-DELETE FROM `Tipo_Vehiculo`;
-/*!40000 ALTER TABLE `Tipo_Vehiculo` DISABLE KEYS */;
+-- Datos para la tabla credicel_Mega_Autoventa.Tipo_Vehiculo: ~4 rows (aproximadamente)
 INSERT INTO `Tipo_Vehiculo` (`Id_Tipo`, `Tipo_Vehiculo`, `Cantidad`) VALUES
 	(1, 'Automoviles', 1026),
 	(2, 'Suv', 206),
 	(3, 'Comerciales_Carga', 37),
 	(4, 'Camioneta', 720);
-/*!40000 ALTER TABLE `Tipo_Vehiculo` ENABLE KEYS */;
 
--- Volcando estructura para tabla credicel_Mega_Autoventa.Ventas
+-- Estructura para tabla credicel_Mega_Autoventa.Ventas
 CREATE TABLE IF NOT EXISTS `Ventas` (
   `Id_Venta` int(11) NOT NULL AUTO_INCREMENT,
   `Vehiculo` varchar(150) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
@@ -138,9 +119,7 @@ CREATE TABLE IF NOT EXISTS `Ventas` (
   PRIMARY KEY (`Id_Venta`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish_ci;
 
--- Volcando datos para la tabla credicel_Mega_Autoventa.Ventas: ~96 rows (aproximadamente)
-DELETE FROM `Ventas`;
-/*!40000 ALTER TABLE `Ventas` DISABLE KEYS */;
+-- Datos para la tabla credicel_Mega_Autoventa.Ventas: ~96 rows (aproximadamente)
 INSERT INTO `Ventas` (`Id_Venta`, `Vehiculo`, `Tipo`, `Departamento`, `Enero`, `Febrero`, `Marzo`, `Abril`, `Mayo`, `Junio`, `Julio`, `Agosto`, `Septiembre`, `Octubre`, `Noviembre`, `Diciembre`) VALUES
 	(1, 'Kia Picanto', 'Automoviles', 'Antioquia', 1, 0, 2, 2, 0, 0, 4, 1, 2, 1, 0, 3),
 	(2, 'Kia Picanto', 'Automoviles', 'Antioquia', 0, 0, 1, 3, 3, 0, 0, 0, 2, 2, 2, 2),
@@ -238,8 +217,3 @@ INSERT INTO `Ventas` (`Id_Venta`, `Vehiculo`, `Tipo`, `Departamento`, `Enero`, `
 	(94, 'Volkswagen Voyage', 'Automoviles', 'Atlantico', 0, 0, 8, 8, 0, 0, 24, 8, 8, 8, 0, 16),
 	(95, 'Kia Stonic', 'Suv', 'Atlantico', 0, 0, 8, 8, 0, 0, 16, 4, 8, 4, 0, 12),
 	(96, 'Kia Rio', 'Automoviles', 'Atlantico', 0, 0, 4, 12, 12, 0, 0, 0, 8, 8, 8, 8);
-/*!40000 ALTER TABLE `Ventas` ENABLE KEYS */;
-
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
